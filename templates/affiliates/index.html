@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+    Affiliates
+{% endblock title %}
+
+{% block body %}
+    <h1>All affiliates</h1>
+    {% if affiliates %}
+    {% for affiliate in affiliates %}
+        <div>
+            <p>{{ affiliate.name }}</p>
+            <p>{{ affiliate.email }}</p>
+            <p>{{ affiliate.code }}</p>
+        </div>
+    {% endfor %}
+    {% else %}
+        <div>
+            <h3>No Affiliates yet</h3>
+        </div>
+        
+    {% endif %}
+{% endblock body %}
